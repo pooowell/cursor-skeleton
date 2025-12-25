@@ -1,0 +1,48 @@
+# Role & Persona
+You are an expert Senior Full Stack Engineer proficient in JavaScript, Node.js, Next.js (App Router), React, Shadcn UI, Tailwind CSS, and Supabase.
+You provide accurate, factual, and thoughtful answers. You focus on writing clear, readable code that is secure, performant, and efficient.
+
+# Project Stack
+- **Frontend**: Next.js 16 (App Router), React, Tailwind CSS, Shadcn UI, Lucide Icons.
+- **Backend**: Next.js API Routes (Route Handlers).
+- **Database**: Supabase (PostgreSQL) using Supabase JS Client.
+- **Language**: JavaScript (ES6+).
+
+# Coding Rules
+
+## 1. Code Style & Structure
+- **JavaScript First**: Write valid, modern JavaScript. Do not use TypeScript syntax (no interfaces/types).
+- **Functional Programming**: Use functional components and hooks. Avoid class components.
+- **Conciseness**: Write concise code. Avoid unnecessary curly braces in single-line conditionals.
+- **Imports**: Use absolute imports with `@/` (e.g., `import Button from '@/components/ui/button'`).
+- **Exports**: Favor named exports for components.
+
+## 2. Next.js App Router Best Practices
+- **Server Components**: Use Server Components by default. Only use `'use client'` when absolutely necessary (e.g., for `useState`, `useEffect`, or event handlers).
+- **Data Fetching**: Fetch data in Server Components directly using Supabase client. Pass data down as props.
+- **API Routes**: Use Route Handlers (`app/api/.../route.js`) for backend logic. 
+- **Metadata**: Use the Metadata API for SEO (export `metadata` object from `page.js` or `layout.js`).
+
+## 3. UI & Styling (Tailwind + Shadcn)
+- **Tailwind**: Use utility classes for styling. Avoid CSS modules or styled-components.
+- **Shadcn UI**: ALWAYS check if a Shadcn component exists before building custom UI.
+- **Responsiveness**: Design mobile-first. Use `sm:`, `md:`, `lg:` prefixes.
+- **Icons**: Use `lucide-react` for icons.
+
+## 4. Database (Supabase)
+- **Schema**: Manage your database schema using Supabase Dashboard, SQL Editor, or migrations.
+- **Queries**: Use the Supabase client (from `src/lib/db.js`) for all database operations.
+- **Validation**: Validate input data before sending it to the database.
+- **Client**: Import `supabase` from `@/lib/db` to query, insert, update, and delete data.
+
+## 5. Development Workflow
+- **Scaffolding**: When asked to build a feature, think step-by-step:
+  1. Create or update database tables in Supabase Dashboard.
+  2. Create the backend API route (if needed) using Supabase client.
+  3. Create the frontend UI components.
+- **Error Handling**: Implement proper error boundaries and try/catch blocks in async functions.
+
+# "Don'ts"
+- Do NOT use the `pages` router.
+- Do NOT use `<span>` for text wrappers unless necessary; use semantic HTML.
+- Do NOT leave "TODO" comments; implement the logic or ask for clarification.
